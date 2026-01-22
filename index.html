@@ -1,0 +1,479 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Screens</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;"
+    class="min-h-screen bg-neutral-950 text-white overflow-hidden">
+
+    <!-- Navigation Tabs -->
+    <div class="fixed top-6 left-1/2 -translate-x-1/2 z-50 flex gap-2 p-1.5 rounded-full"
+        style="background: rgba(255,255,255,0.1); backdrop-filter: blur(12px);">
+        <button onclick="switchScreen(1)" id="tab1"
+            class="tab-btn active px-5 py-2 rounded-full text-sm font-medium transition-all duration-300"
+            style="background: rgba(255,255,255,0.2);">Clean</button>
+        <button onclick="switchScreen(2)" id="tab2"
+            class="tab-btn px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 text-neutral-400 hover:text-white">Futuristic</button>
+        <button onclick="switchScreen(3)" id="tab3"
+            class="tab-btn px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 text-neutral-400 hover:text-white">Artistic</button>
+    </div>
+
+    <!-- Screen 1: Clean & Modern -->
+    <div id="screen1"
+        class="login-screen absolute inset-0 flex items-center justify-center transition-all duration-500">
+        <!-- Animated Background -->
+        <div class="overflow-hidden absolute top-0 right-0 bottom-0 left-0">
+            <div class="absolute w-96 h-96 rounded-full blur-3xl animate-pulse"
+                style="background: linear-gradient(135deg, #a78bfa, #818cf8); top: 10%; left: 20%; opacity: 0.4;"></div>
+            <div class="absolute w-80 h-80 rounded-full blur-3xl animate-pulse"
+                style="background: linear-gradient(135deg, #f9a8d4, #fbbf24); bottom: 20%; right: 15%; opacity: 0.4; animation-delay: 1s;">
+            </div>
+            <div class="absolute w-64 h-64 rounded-full blur-3xl animate-pulse"
+                style="background: linear-gradient(135deg, #34d399, #60a5fa); top: 50%; left: 50%; opacity: 0.3; animation-delay: 2s;">
+            </div>
+        </div>
+
+        <!-- Login Card -->
+        <div class="z-10 w-full max-w-md rounded-3xl mr-4 ml-4 pt-8 pr-8 pb-8 pl-8 relative"
+            style="background: rgba(255,255,255,0.12); backdrop-filter: blur(40px); border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 0 80px rgba(167,139,250,0.15)">
+            <div class="text-center mb-8">
+                <div class="text-2xl font-semibold tracking-tight mb-2">TWILOOK</div>
+                <p class="text-neutral-400 text-sm">Welcome back</p>
+            </div>
+
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-xs text-neutral-400 mb-2">Email</label>
+                    <div class="relative">
+                        <span class="iconify absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400"
+                            data-icon="lucide:mail" data-width="18" style="stroke-width: 1.5;"></span>
+                        <input type="email" placeholder="name@company.com"
+                            class="w-full pl-12 pr-4 py-3 rounded-xl text-sm outline-none transition-all focus:ring-2 focus:ring-violet-500/50"
+                            style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs text-neutral-400 mb-2">Password</label>
+                    <div class="relative">
+                        <span class="iconify absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400"
+                            data-icon="lucide:lock" data-width="18" style="stroke-width: 1.5;"></span>
+                        <input type="password" placeholder="••••••••"
+                            class="w-full pl-12 pr-4 py-3 rounded-xl text-sm outline-none transition-all focus:ring-2 focus:ring-violet-500/50"
+                            style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);">
+                    </div>
+                </div>
+
+                <button
+                    class="w-full py-3.5 rounded-xl font-medium text-sm transition-all hover:scale-[1.02] active:scale-[0.98]"
+                    style="background: linear-gradient(135deg, #8b5cf6, #6366f1); box-shadow: 0 8px 32px rgba(139,92,246,0.35);">
+                    Sign In
+                </button>
+
+                <div class="flex items-center gap-4 my-6">
+                    <div class="flex-1 h-px" style="background: rgba(255,255,255,0.1);"></div>
+                    <span class="text-xs text-neutral-500">or continue with</span>
+                    <div class="flex-1 h-px" style="background: rgba(255,255,255,0.1);"></div>
+                </div>
+
+                <div class="flex gap-3">
+                    <button
+                        class="flex-1 py-3 rounded-xl flex items-center justify-center gap-2 text-sm transition-all hover:bg-white/10"
+                        style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                        <span class="iconify" data-icon="lucide:github" data-width="18"
+                            style="stroke-width: 1.5;"></span>
+                        GitHub
+                    </button>
+                    <button
+                        class="flex-1 py-3 rounded-xl flex items-center justify-center gap-2 text-sm transition-all hover:bg-white/10"
+                        style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                        <span class="iconify" data-icon="lucide:chrome" data-width="18"
+                            style="stroke-width: 1.5;"></span>
+                        Google
+                    </button>
+                </div>
+            </div>
+
+            <p class="text-center text-sm text-neutral-400 mt-8">
+                Don't have an account? <a href="#" class="text-violet-400 hover:text-violet-300">Sign up</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Screen 2: Apple Liquid Glass -->
+    <div id="screen2"
+        class="login-screen absolute inset-0 flex items-center justify-center transition-all duration-500 opacity-0 pointer-events-none">
+        <!-- Vibrant Colorful Background -->
+        <div class="absolute inset-0"
+            style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);">
+            <!-- Animated color blobs -->
+            <div class="absolute w-[600px] h-[600px] rounded-full"
+                style="background: radial-gradient(circle, rgba(255,107,107,0.6) 0%, rgba(255,107,107,0) 70%); top: -20%; left: -10%; animation: float1 8s ease-in-out infinite;">
+            </div>
+            <div class="absolute w-[500px] h-[500px] rounded-full"
+                style="background: radial-gradient(circle, rgba(78,205,196,0.5) 0%, rgba(78,205,196,0) 70%); top: 20%; right: -15%; animation: float2 10s ease-in-out infinite;">
+            </div>
+            <div class="absolute w-[550px] h-[550px] rounded-full"
+                style="background: radial-gradient(circle, rgba(199,125,255,0.5) 0%, rgba(199,125,255,0) 70%); bottom: -10%; left: 20%; animation: float3 9s ease-in-out infinite;">
+            </div>
+            <div class="absolute w-[400px] h-[400px] rounded-full"
+                style="background: radial-gradient(circle, rgba(255,200,87,0.4) 0%, rgba(255,200,87,0) 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); animation: float4 7s ease-in-out infinite;">
+            </div>
+            <div class="absolute w-[350px] h-[350px] rounded-full"
+                style="background: radial-gradient(circle, rgba(108,178,255,0.5) 0%, rgba(108,178,255,0) 70%); bottom: 10%; right: 10%; animation: float5 11s ease-in-out infinite;">
+            </div>
+        </div>
+
+        <!-- Main Liquid Glass Card -->
+        <div class="relative z-10 w-full max-w-sm mx-4">
+            <!-- Outer glow -->
+            <div class="absolute -inset-1 rounded-[32px] opacity-50"
+                style="background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05)); filter: blur(20px);">
+            </div>
+
+            <!-- Main glass container -->
+            <div class="relative rounded-[28px] overflow-hidden"
+                style="background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%); backdrop-filter: blur(40px) saturate(180%); -webkit-backdrop-filter: blur(40px) saturate(180%); border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -1px 0 rgba(255,255,255,0.05);">
+
+                <!-- Top highlight reflection -->
+                <div class="absolute top-0 left-0 right-0 h-24 pointer-events-none"
+                    style="background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 100%); border-radius: 28px 28px 0 0;">
+                </div>
+
+                <!-- Content -->
+                <div class="relative p-8">
+                    <!-- Logo/Icon -->
+                    <div class="flex justify-center mb-6">
+                        <div class="relative">
+                            <!-- Icon glass container -->
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center"
+                                style="background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.08) 100%); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.25); box-shadow: 0 4px 16px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.3);">
+                                <span class="iconify text-white/90" data-icon="lucide:sparkles" data-width="28"
+                                    style="stroke-width: 1.5;"></span>
+                            </div>
+                            <!-- Subtle glow behind icon -->
+                            <div class="absolute inset-0 rounded-2xl"
+                                style="background: radial-gradient(circle, rgba(199,125,255,0.3), transparent); filter: blur(12px); z-index: -1;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <h1 class="text-center text-xl font-medium tracking-tight text-white/95 mb-1">Welcome Back</h1>
+                    <p class="text-center text-sm text-white/50 mb-8">Sign in to continue</p>
+
+                    <!-- Input fields with glass effect -->
+                    <div class="space-y-4">
+                        <div class="relative">
+                            <div class="relative rounded-xl overflow-hidden"
+                                style="background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%); border: 1px solid rgba(255,255,255,0.15); box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);">
+                                <span class="iconify absolute left-4 top-1/2 -translate-y-1/2 text-white/40"
+                                    data-icon="lucide:mail" data-width="18" style="stroke-width: 1.5;"></span>
+                                <input type="email" placeholder="Email address"
+                                    class="w-full bg-transparent pl-12 pr-4 py-3.5 text-sm text-white/90 placeholder-white/30 outline-none">
+                            </div>
+                        </div>
+
+                        <div class="relative">
+                            <div class="relative rounded-xl overflow-hidden"
+                                style="background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%); border: 1px solid rgba(255,255,255,0.15); box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);">
+                                <span class="iconify absolute left-4 top-1/2 -translate-y-1/2 text-white/40"
+                                    data-icon="lucide:lock" data-width="18" style="stroke-width: 1.5;"></span>
+                                <input type="password" placeholder="Password"
+                                    class="w-full bg-transparent pl-12 pr-4 py-3.5 text-sm text-white/90 placeholder-white/30 outline-none">
+                                <span
+                                    class="iconify absolute right-4 top-1/2 -translate-y-1/2 text-white/30 cursor-pointer hover:text-white/50 transition-colors"
+                                    data-icon="lucide:eye" data-width="18" style="stroke-width: 1.5;"></span>
+                            </div>
+                        </div>
+
+                        <!-- Forgot password -->
+                        <div class="flex justify-end">
+                            <a href="#" class="text-xs text-white/40 hover:text-white/60 transition-colors">Forgot
+                                password?</a>
+                        </div>
+
+                        <!-- Sign in button with glass effect -->
+                        <button
+                            class="w-full py-3.5 rounded-xl font-medium text-sm text-white/95 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] relative overflow-hidden group"
+                            style="background: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.1) 100%); border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 4px 16px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.3);">
+                            <span class="relative z-10">Sign In</span>
+                            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                style="background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.15) 100%);">
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="flex items-center gap-4 my-6">
+                        <div class="flex-1 h-px"
+                            style="background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);">
+                        </div>
+                        <span class="text-xs text-white/30">or</span>
+                        <div class="flex-1 h-px"
+                            style="background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);">
+                        </div>
+                    </div>
+
+                    <!-- Social buttons -->
+                    <div class="flex gap-3">
+                        <button
+                            class="flex-1 py-3 rounded-xl flex items-center justify-center gap-2 text-sm text-white/70 transition-all duration-300 hover:text-white/90 hover:scale-[1.02]"
+                            style="background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%); border: 1px solid rgba(255,255,255,0.1); box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);">
+                            <span class="iconify" data-icon="lucide:apple" data-width="18"
+                                style="stroke-width: 1.5;"></span>
+                        </button>
+                        <button
+                            class="flex-1 py-3 rounded-xl flex items-center justify-center gap-2 text-sm text-white/70 transition-all duration-300 hover:text-white/90 hover:scale-[1.02]"
+                            style="background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%); border: 1px solid rgba(255,255,255,0.1); box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);">
+                            <span class="iconify" data-icon="lucide:chrome" data-width="18"
+                                style="stroke-width: 1.5;"></span>
+                        </button>
+                        <button
+                            class="flex-1 py-3 rounded-xl flex items-center justify-center gap-2 text-sm text-white/70 transition-all duration-300 hover:text-white/90 hover:scale-[1.02]"
+                            style="background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%); border: 1px solid rgba(255,255,255,0.1); box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);">
+                            <span class="iconify" data-icon="lucide:github" data-width="18"
+                                style="stroke-width: 1.5;"></span>
+                        </button>
+                    </div>
+
+                    <!-- Sign up link -->
+                    <p class="text-center text-sm text-white/40 mt-8">
+                        Don't have an account? <a href="#"
+                            class="text-white/70 hover:text-white/90 transition-colors">Sign up</a>
+                    </p>
+                </div>
+
+                <!-- Bottom subtle reflection -->
+                <div class="absolute bottom-0 left-0 right-0 h-16 pointer-events-none"
+                    style="background: linear-gradient(0deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%);">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 3: Artistic Mercury -->
+    <div id="screen3"
+        class="login-screen absolute inset-0 flex items-center justify-center transition-all duration-500 opacity-0 pointer-events-none">
+        <!-- Holographic Background -->
+        <div class="absolute inset-0" style="background: linear-gradient(180deg, #18181b 0%, #27272a 100%);">
+            <div class="absolute inset-0 opacity-30"
+                style="background: conic-gradient(from 180deg at 50% 50%, #f472b6, #a78bfa, #38bdf8, #34d399, #fbbf24, #f472b6);filter: blur(100px);">
+            </div>
+            <div class="absolute w-full h-full"
+                style="background: url('data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22none%22 stroke=%22rgba(255,255,255,0.03)%22 stroke-width=%220.5%22/&gt;&lt;/svg&gt;') repeat; background-size: 200px;">
+            </div>
+        </div>
+
+        <!-- Login Card -->
+        <div class="relative z-10 w-full max-w-sm mx-4">
+            <!-- Floating orbs -->
+            <div class="absolute -top-8 -left-8 w-24 h-24 rounded-full blur-xl opacity-60"
+                style="background: linear-gradient(135deg, #f472b6, #a78bfa);"></div>
+            <div class="absolute -bottom-6 -right-6 w-20 h-20 rounded-full blur-xl opacity-50"
+                style="background: linear-gradient(135deg, #38bdf8, #34d399);"></div>
+
+            <div class="relative p-8 rounded-3xl overflow-hidden"
+                style="background: rgba(255,255,255,0.05); backdrop-filter: blur(40px); border: 1px solid rgba(255,255,255,0.15);">
+                <!-- Shimmer effect -->
+                <div class="absolute inset-0 opacity-20"
+                    style="background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.4) 45%, rgba(255,255,255,0.4) 55%, transparent 60%); animation: shimmer 3s infinite;">
+                </div>
+
+                <div class="relative">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-16 h-16 rounded-full flex items-center justify-center"
+                            style="background: linear-gradient(135deg, rgba(244,114,182,0.3), rgba(167,139,250,0.3), rgba(56,189,248,0.3)); border: 2px solid rgba(255,255,255,0.1);">
+                            <span class="text-2xl font-semibold tracking-tight"
+                                style="background: linear-gradient(135deg, #f472b6, #a78bfa, #38bdf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">T</span>
+                        </div>
+                    </div>
+
+                    <h1 class="text-center text-xl font-semibold tracking-tight mb-1">Welcome to TWILOOK</h1>
+                    <p class="text-center text-neutral-400 text-sm mb-8">Sign in to continue</p>
+
+                    <div class="space-y-4">
+                        <div class="relative">
+                            <input type="email" placeholder="Email"
+                                class="w-full px-4 py-3.5 rounded-2xl text-sm outline-none transition-all"
+                                style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);">
+                        </div>
+
+                        <div class="relative">
+                            <input type="password" placeholder="Password"
+                                class="w-full px-4 py-3.5 rounded-2xl text-sm outline-none transition-all"
+                                style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);">
+                        </div>
+
+                        <button
+                            class="w-full py-3.5 rounded-2xl font-medium text-sm text-white transition-all hover:scale-[1.02] active:scale-[0.98] relative overflow-hidden"
+                            style="background: linear-gradient(135deg, #f472b6, #a78bfa, #38bdf8); background-size: 200% 200%; animation: gradient 3s ease infinite;">
+                            Continue
+                        </button>
+                    </div>
+
+                    <div class="mt-6 pt-6" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                        <div class="flex items-center justify-center gap-4">
+                            <button
+                                class="w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110"
+                                style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);">
+                                <span class="iconify text-neutral-300" data-icon="lucide:twitter" data-width="18"
+                                    style="stroke-width: 1.5;"></span>
+                            </button>
+                            <button
+                                class="w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110"
+                                style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);">
+                                <span class="iconify text-neutral-300" data-icon="lucide:github" data-width="18"
+                                    style="stroke-width: 1.5;"></span>
+                            </button>
+                            <button
+                                class="w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110"
+                                style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);">
+                                <span class="iconify text-neutral-300" data-icon="lucide:apple" data-width="18"
+                                    style="stroke-width: 1.5;"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="text-center text-xs text-neutral-500 mt-6">
+                        By signing in, you agree to our <a href="#" class="text-pink-400">Terms</a> &amp; <a href="#"
+                            class="text-violet-400">Privacy</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes float1 {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            50% {
+                transform: translate(30px, 20px) scale(1.1);
+            }
+        }
+
+        @keyframes float2 {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            50% {
+                transform: translate(-20px, 30px) scale(1.05);
+            }
+        }
+
+        @keyframes float3 {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            50% {
+                transform: translate(25px, -20px) scale(1.08);
+            }
+        }
+
+        @keyframes float4 {
+
+            0%,
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            50% {
+                transform: translate(-45%, -55%) scale(1.15);
+            }
+        }
+
+        @keyframes float5 {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            50% {
+                transform: translate(-30px, -15px) scale(1.1);
+            }
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.35);
+        }
+
+        input:focus {
+            border-color: rgba(255, 255, 255, 0.3) !important;
+        }
+
+        /* Liquid glass input focus effect */
+        #screen2 input:focus {
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        }
+    </style>
+
+    <script>
+        function switchScreen(num) {
+            document.querySelectorAll('.login-screen').forEach((screen, i) => {
+                if (i + 1 === num) {
+                    screen.classList.remove('opacity-0', 'pointer-events-none');
+                } else {
+                    screen.classList.add('opacity-0', 'pointer-events-none');
+                }
+            });
+            document.querySelectorAll('.tab-btn').forEach((btn, i) => {
+                if (i + 1 === num) {
+                    btn.style.background = 'rgba(255,255,255,0.2)';
+                    btn.classList.remove('text-neutral-400');
+                    btn.classList.add('text-white');
+                } else {
+                    btn.style.background = 'transparent';
+                    btn.classList.add('text-neutral-400');
+                    btn.classList.remove('text-white');
+                }
+            });
+        }
+    </script>
+
+
+</body>
+
+</html>
